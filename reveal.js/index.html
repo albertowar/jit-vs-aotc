@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Fun with JIT</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-auto-animate>
+					<h1>Fun with JIT</h1>
+				</section>
+				<section>
+					<section>
+						<h2>What's the fastest way to sum an array?</h2>
+					</section>
+					<section>
+						<img src="assets/cloop.png"></img>
+					</section>
+					<section>
+						<img src="assets/functional.png"></img>
+					</section>
+					<section>
+						<img src="assets/iterator.png"></img>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script>
+			Reveal.initialize({
+				plugins: [ RevealMarkdown ]
+			});
+		</script>
+	</body>
+</html>

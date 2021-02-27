@@ -1,19 +1,40 @@
-compile-loop:
-	javac ./me/albertowar/loop/Sum.java
+compile-cloop:
+	javac ./com/albertowar/cloop/Main.java ./com/albertowar/cloop/Calculator.java ./com/albertowar/statistics/Statistics.java
 
-compile-lambda:
-	javac ./me/albertowar/lambda/Sum.java
+compile-functional:
+	javac ./com/albertowar/functional/Main.java ./com/albertowar/functional/Calculator.java ./com/albertowar/statistics/Statistics.java
 
-bytecode-loop:
-	javap -c ./me/albertowar/loop/Sum.class
+compile-iterator:
+	javac ./com/albertowar/iterator/Main.java ./com/albertowar/iterator/Calculator.java ./com/albertowar/statistics/Statistics.java
 
-bytecode-lambda:
-	javap -c ./me/albertowar/lambda/Sum.class
+bytecode-cloop:
+	javap -c ./com/albertowar/cloop/Calculator.class
 
-run-loop:
-	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.loop.Sum
+bytecode-functional:
+	javap -c ./com/albertowar/functional/Calculator.class
 
-run-lambda:
-	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.lambda.Sum
+bytecode-iterator:
+	javap -c ./com/albertowar/iterator/Calculator.class
 
-.PHONY: compile-loop compile-lambda bytecode-loop bytecode-lambda run-loop run-lambda
+run-cloop: compile-cloop
+	java -cp . com.albertowar.cloop.Main ${ITERATIONS}
+
+run-functional: compile-functional
+	java -cp . com.albertowar.functional.Main ${ITERATIONS}
+
+run-iterator: compile-iterator
+	java -cp . com.albertowar.iterator.Main ${ITERATIONS}
+
+run-cloop-diag:
+	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.cloop.Main ${ITERATIONS}
+
+run-functional-diag:
+	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.functional.Main ${ITERATIONS}
+
+run-iterator-diag:
+	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.iterator.Main ${ITERATIONS}
+
+present:
+	cd reveal.js; npm start
+
+.PHONY: compile-cloop compile-functional compile-iterator bytecode-cloop bytecode-functional bytecode-iterator run-cloop run-functional run-cloop-diag run-functional-diag run-iterator-diag
