@@ -1,3 +1,4 @@
 *.class
 *.log
+*.so
 node_modules
