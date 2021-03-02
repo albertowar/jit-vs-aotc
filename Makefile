@@ -3,10 +3,10 @@ aotc-compile-module:
 
 # C style
 compile-cloop:
-	javac ./com/albertowar/cloop/Main.java ./com/albertowar/cloop/Calculator.java ./com/albertowar/statistics/Statistics.java
+	javac ./com/albertowar/cloop/Main.java ./com/albertowar/cloop/Calculator.java
 
 aotc-compile-cloop:
-	jaotc -J-XX:+UseCompressedOops -J-XX:+UseG1GC -J-Xmx4g --compile-for-tiered --output ./com/albertowar/cloop/cloop.so --search-path ./com/albertowar/cloop --class-name com.albertowar.cloop.Main.class:com.albertowar.cloop.Calculator.class:com.albertowar.statistics.Statistics.class --info
+	jaotc -J-XX:+UseCompressedOops -J-XX:+UseG1GC -J-Xmx4g --compile-for-tiered --output ./com/albertowar/cloop/cloop.so --search-path ./com/albertowar/cloop --class-name com.albertowar.cloop.Main.class:com.albertowar.cloop.Calculator.class --info
 
 run-cloop:
 	java -cp . com.albertowar.cloop.Main ${ITERATIONS}
@@ -22,10 +22,10 @@ bytecode-cloop:
 
 # functional
 compile-functional:
-	javac ./com/albertowar/functional/Main.java ./com/albertowar/functional/Calculator.java ./com/albertowar/statistics/Statistics.java
+	javac ./com/albertowar/functional/Main.java ./com/albertowar/functional/Calculator.java
 
 aotc-compile-functional:
-	jaotc -J-XX:+UseCompressedOops -J-XX:+UseG1GC -J-Xmx4g --compile-for-tiered --output ./com/albertowar/functional/functional.so --search-path ./com/albertowar/functional --class-name com.albertowar.functional.Main.class:com.albertowar.functional.Calculator.class:com.albertowar.statistics.Statistics.class --info
+	jaotc -J-XX:+UseCompressedOops -J-XX:+UseG1GC -J-Xmx4g --compile-for-tiered --output ./com/albertowar/functional/functional.so --search-path ./com/albertowar/functional --class-name com.albertowar.functional.Main.class:com.albertowar.functional.Calculator.class --info
 
 run-functional:
 	java -cp . com.albertowar.functional.Main ${ITERATIONS}
@@ -41,10 +41,10 @@ bytecode-functional:
 
 # Iterator
 compile-iterator:
-	javac ./com/albertowar/iterator/Main.java ./com/albertowar/iterator/Calculator.java ./com/albertowar/statistics/Statistics.java
+	javac ./com/albertowar/iterator/Main.java ./com/albertowar/iterator/Calculator.java
 
 aotc-compile-iterator:
-	jaotc --compile-for-tiered --output ./com/albertowar/iterator/iterator.so --search-path ./com/albertowar/iterator --class-name com.albertowar.iterator.Main.class:com.albertowar.iterator.Calculator.class:com.albertowar.statistics.Statistics.class --info
+	jaotc --compile-for-tiered --output ./com/albertowar/iterator/iterator.so --search-path ./com/albertowar/iterator --class-name com.albertowar.iterator.Main.class:com.albertowar.iterator.Calculator.class --info
 
 run-iterator:
 	java -cp . com.albertowar.iterator.Main ${ITERATIONS}
@@ -60,6 +60,6 @@ bytecode-iterator:
 
 # Slides
 present:
-	cd reveal.js; npm startAl
+	cd reveal.js; npm start
 
 .PHONY: compile-cloop compile-functional compile-iterator bytecode-cloop bytecode-functional bytecode-iterator run-cloop run-functional run-cloop-diag run-functional-diag run-iterator-diag
