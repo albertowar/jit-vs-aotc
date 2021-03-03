@@ -50,7 +50,7 @@ run-iterator:
 	java -cp . com.albertowar.iterator.Main ${ITERATIONS}
 
 run-iterator-diag:
-	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassL0oading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.iterator.Main ${ITERATIONS}
+	java -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -cp . com.albertowar.iterator.Main ${ITERATIONS}
 
 aotc-run-iterator:
 	java -XX:+UnlockExperimentalVMOptions -XX:AOTLibrary=./libjava.base-coop.so,./com/albertowar/iterator/iterator.so com.albertowar.iterator.Main ${ITERATIONS}
