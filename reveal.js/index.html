@@ -33,14 +33,84 @@
 						<img src="assets/iterator.png"></img>
 					</section>
 				</section>
+				<section>
+					<section>
+						<h2>Let's measure it!</h2>
+					</section>
+					<section>
+						<img src="assets/test.png"></img>
+						<aside class="notes">
+							Run multiple examples with different number of iterations
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>What's going on?</h2>
+						<img src="https://media.giphy.com/media/ukGm72ZLZvYfS/giphy.gif"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>🎉 The JIT compiler 🎉</h2>
+					</section>
+					<section>
+						<img src="assets/flow.jpg" />
+						<aside class="notes">
+							Describe the flow of the execution
+						</aside>
+					</section>
+					<section>
+						<img src="assets/tiered-compilation.jpg" />
+						<aside class="notes">
+							Describe the flow of the execution
+						</aside>
+					</section>
+					<section>
+						TBD ... talk about C1 and C2 compilers
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Optimizations</h2>
+					</section>
+					<section>
+						<img src="assets/optimizations.png" />
+					</section>
+					<section>
+						<h2>Inlining</h2>
+						Example
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>What's the fastest way to sum an array?</h2>
+					</section>
+					<section>
+						<h2>
+							<a href="https://github.com/openjdk/jmh">
+								JMH
+							</a>
+							to the rescue
+						</h2>
+						<aside class="notes">
+							Explain how the tool works
+						</aside>
+					</section>
+					<section>
+						Results
+					</section>
+				</section>
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 			Reveal.initialize({
-				plugins: [ RevealMarkdown ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 	</body>

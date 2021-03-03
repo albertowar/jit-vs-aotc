@@ -10,7 +10,7 @@ public class Calculator {
 	public int sum() {
         int sum = 0;
 
-        for (int i = 0; i < numbers.length; ++i) {
+        for (int i = 0; i < this.numbers.length; ++i) {
             sum += this.numbers[i];
         }
 
