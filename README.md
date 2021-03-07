@@ -3,7 +3,7 @@
 ## To run locally
 In order to run any of the solutions locally:
 
-```
+```bash
 make compile-cloop
 ITERATIONS=1 make run-cloop
 ```
@@ -17,11 +17,17 @@ ITERATIONS=1 make run-cloop
 
 > Increase the number of iterations in order to force different tiers of compilation.
 
+## Go benchmark:
+In order to run the go benchmark:
+```go
+go test -bench=.
+```
+
 ## Notes
 For the AOTC execution, it is required to run this in advance:
 
 ```
-aotc-compile-module
+make aotc-compile-module
 ```
 
 This will precompile the java.base module (300 MB) which can be reused across all aotc options.

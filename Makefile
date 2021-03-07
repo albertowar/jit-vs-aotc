@@ -58,8 +58,4 @@ aotc-run-iterator:
 bytecode-iterator:
 	javap -c ./com/albertowar/iterator/Calculator.class
 
-# Slides
-present:
-	cd reveal.js; npm start
-
 .PHONY: compile-cloop compile-functional compile-iterator bytecode-cloop bytecode-functional bytecode-iterator run-cloop run-functional run-cloop-diag run-functional-diag run-iterator-diag
