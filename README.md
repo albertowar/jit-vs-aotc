@@ -17,12 +17,6 @@ ITERATIONS=1 make run-cloop
 
 > Increase the number of iterations in order to force different tiers of compilation.
 
-## Go benchmark:
-In order to run the go benchmark:
-```go
-go test -bench=.
-```
-
 ## Notes
 For the AOTC execution, it is required to run this in advance:
 
