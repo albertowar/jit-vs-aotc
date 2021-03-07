@@ -1,15 +1,5 @@
 # jit-vs-aotc
 
-## Slides
-To present the slides (requires node.js):
-
-```
-cd reveal.js
-npm install
-cd ..
-make present
-```
-
 ## To run locally
 In order to run any of the solutions locally:
 
